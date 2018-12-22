@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="assets/ico/manifest.json">
+    <link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Klingshirn Winery</title>
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/plugins/flickity/flickity.min.css">
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+
+</head>
+<body>
+
+<!-- NavBar inserted here by javascript
+================================================== -->
+<div id="navigation"></div>
+
+<!-- HEADER
+================================================== -->
+<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/coloredVines.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h1 class="section__heading section_header__heading text-center">
+                    News & Events
+                </h1>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+
+
+<!-- EVENTS
+================================================== -->
+<section class="section section_events section_no-padding_bottom">
+
+    <!-- Intro -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading text-center">
+                    Upcoming events
+                </h2>
+
+                <!-- Subheading -->
+                <p class="section__subheading text-center">
+                    Commodi rem veritatis quis eaque mollitia.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+
+
+{% for event in events %}
+
+	<!-- DISCOVER
+	================================================== -->
+	<section class="section section_discover section_no-padding_bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 align-self-start">
+
+					<!-- Image -->
+					<div class="section_discover__img">
+						<img src={{event.image}} class="img-fluid" alt="...">
+					</div>
+
+				</div>
+				<div class="col-md-6 align-self-center">
+					<h2>
+						{{event.date}}
+					</h2>
+					<!-- Content -->
+					<h2>{{event.name}}</h2>
+                    <p>{{event.description1}}</p>
+                    <p>{{event.description2}}</p>
+                    <p>{{event.description3}}</p>
+                    <p>{{event.description4}}</p>
+
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+
+{% endfor %}
+
+
+
+<!-- NEWSLETTER
+================================================== -->
+<section class="section section_gray section_newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading section_newsletter__heading text-center">
+                    Newsletter
+                </h2>
+                <p class="section__subheading text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
+                <!-- Form -->
+                <div id="mc_embed_signup">
+                    <form class="section_newsletter__form validate" action="//simpleqode.us15.list-manage.com/subscribe/post-json?u=507744bbfd1cc2879036c7780&id=4523d25e1b&c=?" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+                        <div id="mc_embed_signup_scroll" class="row">
+                            <div class="mc-field-group form-group col-md-9">
+                                <label for="mce-EMAIL" class="sr-only">E-mail address</label>
+                                <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email address">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response"></div>
+                                <div class="response" id="mce-success-response"></div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div aria-hidden="true" id="mce-hidden-input">
+                                <input type="text" name="b_507744bbfd1cc2879036c7780_4523d25e1b" tabindex="-1" value="">
+                            </div>
+                            <div class="clear col-md-3 text-center">
+                                <button type="submit" class="btn btn-primary" id="mc-embedded-subscribe">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div> <!-- #mc_embed_signup -->
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- jquery will insert footer.html here
+================================================== -->
+<div id="footer" ></div>
+
+
+<!-- JAVASCRIPT
+================================================== -->
+
+<!-- JS Global -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS Plugins -->
+<script src="assets/plugins/parallax/parallax.min.js"></script>
+<script src="assets/plugins/isotope/lib/imagesloaded.pkgd.min.js"></script>
+<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+<script src="assets/plugins/flickity/flickity.pkgd.min.js"></script>
+<script src="assets/plugins/lightbox/js/lightbox.min.js"></script>
+<script src="assets/plugins/reservation/reservation.js"></script>
+<script src="assets/plugins/alerts/alerts.js"></script>
+
+<!-- JS Custom -->
+<script src="assets/js/theme.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+        $("#navigation").load("navigation.html");
+        $("#footer").load("footer.html");
+    });
+
+</script>
+
+</body>
+</html>
