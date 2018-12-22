@@ -13,15 +13,6 @@ with open('/home/jim/Desktop/html/dist/assets/json/events.json') as f:
 
 event_list = data['events']
 
-#
-# items = []
-# for event in event_list:
-#     i = str(i)
-#
-#     # dict == {}
-#     # you just don't have to quote the keys
-#     an_item = dict(date="2012-02-" + i, id=i, position="here", status="waiting")
-#     items.append(an_item)
 
 print(template.render(events=event_list))
 filename = '/home/jim/Desktop/html/dist/events_jinja2.html' #os.path.join(root, 'html', 'index.html')
