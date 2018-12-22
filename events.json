@@ -1,0 +1,22 @@
+{
+  "events":
+  [{
+    "name": "Spring Steak Fry",
+    "date": "3/13/2019",
+    "image": "assets/img/steakFry.jpg",
+    "description1": "Adult dinners consist of a 16-ounce Porterhouse steak, scalloped potato, salad, vegetable, roll, dessert, & coffee or tea.",
+    "description2": "Serving from 5:30 to 8:00 PM",
+    "description3": "Price: $30.00 per person. Cost of your wine is extra.",
+    "description4": "Reservations Only\nFor Reservations, Call us at (440) 933-6666 or e-mail us at info@klingshirnwine.com"
+  },
+    {
+      "name": "Meet & Greet the Winemaker",
+      "date": "4/15/2019",
+      "image": "assets/img/meetTheWinemaker.jpg",
+      "description1": "Hang out with Lee and the Klingshirn Winery staff.",
+      "description2": "Taste Lee's favorite wine.",
+      "description3": "",
+      "description4": ""
+    }
+  ]
+}
