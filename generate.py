@@ -8,13 +8,14 @@ templates_dir = os.path.join(root, 'templates')
 env = Environment( loader = FileSystemLoader(templates_dir) )
 template = env.get_template('template.html')  
 
-with open('/home/jim/Desktop/html/dist/assets/json/events.json') as f:
+with open('events.json') as f:
     data = json.load(f)
 
 event_list = data['events']
+news_list = data['news']
 
+print(template.render(news=news_list, events=event_list))
 
-print(template.render(events=event_list))
-filename = '/home/jim/Desktop/html/dist/events_jinja2.html' #os.path.join(root, 'html', 'index.html')
+filename = '/home/jim/Desktop/html/dist/news-and-events.html' #os.path.join(root, 'html', 'index.html')
 with open(filename, 'w') as fh:
-	fh.write(template.render(events=event_list))
+	fh.write(template.render(news=news_list, events=event_list))

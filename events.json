@@ -1,4 +1,24 @@
 {
+  "news":
+  [{
+    "headline": "New Shipment of Winery T-Shirts have arrived!",
+    "date": "3/13/2019",
+    "image": "assets/img/wineryShirt.jpg",
+    "description1": "Small, Medium, Large and Extra Large",
+    "description2": "Great quality shirts, featuring the winery logo",
+    "description3": "",
+    "description4": ""
+  },
+    {
+      "headline": "Lee Klingshirn inducted into the Ohio Wine Hall of Fame",
+      "date": "4/24/2018",
+      "image": "assets/img/leeTractor.jpg",
+      "description1": "The state wine industry recently gathered in Dublin, Ohio to honor Claudio Salvador, owner and winemaker at Firelands Winery in Sandusky, and Lee Klingshirn, owner and winemaker at Klingshirn Winery in Avon Lake. The two winemakers were inducted into the Ohio Wine Hall of Fame.",
+      "description2": "",
+      "description3": "",
+      "description4": ""
+    }
+  ],
   "events":
   [{
     "name": "Spring Steak Fry",
