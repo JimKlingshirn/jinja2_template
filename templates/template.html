@@ -25,89 +25,138 @@
 </head>
 <body>
 
-<!-- NavBar inserted here by javascript
-================================================== -->
-<div id="navigation"></div>
+    <!-- NavBar inserted here by javascript
+    ================================================== -->
+    <div id="navigation"></div>
 
-<!-- HEADER
-================================================== -->
-<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/coloredVines.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col">
+    <!-- HEADER
+    ================================================== -->
+    <section class="section section_header" data-parallax="scroll" data-image-src="assets/img/coloredVines.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col">
 
-                <!-- Heading -->
-                <h1 class="section__heading section_header__heading text-center">
-                    News & Events
-                </h1>
+                    <!-- Heading -->
+                    <h1 class="section__heading section_header__heading text-center">
+                        News & Events
+                    </h1>
 
-            </div>
-        </div> <!-- / .row -->
-    </div> <!-- / .container -->
-</section>
-
-
-
-<!-- EVENTS
-================================================== -->
-<section class="section section_events section_no-padding_bottom">
-
-    <!-- Intro -->
-    <div class="container">
-        <div class="row">
-            <div class="col">
-
-                <!-- Heading -->
-                <h2 class="section__heading text-center">
-                    Upcoming events
-                </h2>
-
-                <!-- Subheading -->
-                <p class="section__subheading text-center">
-                    Commodi rem veritatis quis eaque mollitia.
-                </p>
-
-            </div>
-        </div> <!-- / .row -->
-    </div> <!-- / .container -->
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
 
 
-{% for event in events %}
-
-	<!-- DISCOVER
+	<!-- INFO
 	================================================== -->
-	<section class="section section_discover section_no-padding_bottom">
+	<section class="section section_info section_info_opposite ">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 align-self-start">
+				<div class="col">
 
-					<!-- Image -->
-					<div class="section_discover__img">
-						<img src={{event.image}} class="img-fluid" alt="...">
-					</div>
-
-				</div>
-				<div class="col-md-6 align-self-center">
-					<h2>
-						{{event.date}}
+					<!-- Heading -->
+					<h2 class="section__heading text-center">
+						Our latest news
 					</h2>
-					<!-- Content -->
-					<h2>{{event.name}}</h2>
-                    <p>{{event.description1}}</p>
-                    <p>{{event.description2}}</p>
-                    <p>{{event.description3}}</p>
-                    <p>{{event.description4}}</p>
 
+					<!-- Subheading -->
+					<p class="section__subheading text-center">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia obcaecati sit odio velit culpa aspernatur consectetur natus quidem minima veritatis.
+					</p>
 
 				</div>
 			</div> <!-- / .row -->
+
+            {% for news_item in news %}
+
+			<div class="row align-items-justify">
+				<div class="col-md-6 order-md-3">
+
+					<div class="section_info__img">
+						<img src={{news_item.image}} alt="...">
+					</div>
+
+				</div>
+				<div class="col-md-1 order-md-2"></div>
+				<div class="col-md-5 order-md-1">
+
+					<div class="section_info__body">
+						<h3 class="section__preheading text-primary">
+							<time datetime="2017-08-30">{{news_item.date}}</time>
+						</h3>
+						<h2 class="section__heading">
+							{{news_item.headline}}
+						</h2>
+						<p class="section__subheading">
+							 {{news_item.description1}}
+						</p>
+						<a href="#" class="btn btn-primary">
+							Read more...
+						</a>
+					</div>
+
+				</div>
+			</div> <!-- / .row -->
+
+            {% endfor %}
+
 		</div> <!-- / .container -->
 	</section>
 
 
-{% endfor %}
+	<!-- DISCOVER
+	================================================== -->
+	<section class="section section_discover ">
+		<div class="container">
+
+			<div class="row">
+				<div class="col">
+
+					<!-- Heading -->
+					<h2 class="section__heading text-center">
+						Upcoming Events
+					</h2>
+
+					<!-- Subheading -->
+					<p class="section__subheading text-center">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia obcaecati sit odio velit culpa aspernatur consectetur natus quidem minima veritatis.
+					</p>
+
+				</div>
+			</div> <!-- / .row -->
+
+            {% for event in events %}
+
+                <div class="row">
+                    <div class="col-md-4 align-self-start">
+
+                        <!-- Image -->
+                        <div class="section_discover__img">
+                            <img src={{event.image}} class="img-fluid" alt="...">
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <h2>
+                            {{event.date}}
+                        </h2>
+                        <!-- Content -->
+                        <h2>{{event.name}}</h2>
+                        <p>{{event.description1}}</p>
+                        <p>{{event.description2}}</p>
+                        <p>{{event.description3}}</p>
+                        <p>{{event.description4}}</p>
 
 
+                    </div>
+                </div> <!-- / .row -->
+
+            {% endfor %}
+
+		</div> <!-- / .container -->
+	</section>
+
+    
 
 <!-- NEWSLETTER
 ================================================== -->
